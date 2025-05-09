@@ -71,7 +71,7 @@ const signin = async (req, res) => {
         message: "Account login successfull",
       });
     } else {
-      return res.status(401).json({ error: "Invalid credentials" });
+      return res.status(400).json({ error: "Invalid credentials" });
     }
   } catch (err) {
     console.log(`error in signin controller ${error.message}`);
